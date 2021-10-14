@@ -1,7 +1,10 @@
 import web3
 from Crypto.Hash import keccak
 
-def Prontohash(str:instring):
+def Prontohash(instring=str()):
+    """
+    Funzione che prende in input una stringa e restituisce il suo hash
+    """
     k = keccak.new(digest_bits=256)
-    k.update(stringa1.encode("utf8"))
-return k.hexdigest()
+    k.update(instring.encode("utf8"))
+    return k.hexdigest()
